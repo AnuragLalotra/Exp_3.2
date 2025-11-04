@@ -1,0 +1,9 @@
+package com.example.springdemo;
+import org.springframework.context.annotation.*;
+@Configuration
+public class AppConfig {
+    @Bean
+    public Course course() { return new Course("Java Spring Development"); }
+    @Bean
+    public Student student() { return new Student(course()); }
+}
